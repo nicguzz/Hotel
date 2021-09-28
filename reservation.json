@@ -1,0 +1,32 @@
+{
+    "Reservation": [
+        {
+            "name": "Nicolas",
+            "last name": "Guzzetti",
+            "id": "10101010",
+            "roomtype": "Presidential Suite",
+            "nights": "3"
+        },
+        {
+            "name": "test",
+            "last name": "Guzzetti",
+            "id": "test",
+            "roomtype": "test",
+            "nights": "test"
+        },
+        {
+            "name": "Nic",
+            "last name": "Guzzetti",
+            "id": "10",
+            "roomtype": "double",
+            "nights": "3"
+        },
+        {
+            "name": "s",
+            "last name": "ds",
+            "id": "sd",
+            "roomtype": "123",
+            "nights": "asd"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "Reservation": [
+        [
+            {
+                "name": "test",
+                "id": "test",
+                "roomtype": "test",
+                "nights": "test"
+            }
+        ],
+        {
+            "name": "Nic",
+            "id": "10",
+            "roomtype": "double",
+            "nights": "3"
+        }
+    ]
+}

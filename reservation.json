@@ -27,6 +27,22 @@
             "id": "sd",
             "roomtype": "123",
             "nights": "asd"
+        },
+        {
+            "name": "as",
+            "last name": "sd",
+            "id": "213",
+            "roomtype": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/main.py",
+            "nights": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/main.py"
+        },
+        {},
+        {},
+        {},
+        {},
+        {},
+        {
+            "name": "Nic",
+            "last name": "Guz"
         }
     ]
 }

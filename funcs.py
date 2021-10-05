@@ -42,7 +42,19 @@ def create_reservation():
     dictionary = {}
     keys = list(reservation[0].keys())
     for key in keys: # title, author
-        dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+        if key == 'roomtype':
+            for i, room in enumerate(roomtypes): 
+                print(f"{i + 1 }. {room}")
+
+            user_index = int(input("Choose: "))
+            print(roomtypes[user_index - 1])
+            # return dictionary[key]
+                #WE NEED TO ADD ROOMTYPE THAT USER CHOOSES(1,2,3) TO THE NEW DICTIONARY BEFORE COMPLETING RESA
+        else:
+            dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+
+        # dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+        
     reservation.append(dictionary)
     json_save()
 

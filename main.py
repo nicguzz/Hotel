@@ -32,9 +32,11 @@ while user != "q":
 
     elif user == "3": # Inhouse reservations
 
+        inh_list = funcs.inhouse_reservations_list(funcs.checkin)
+
 
         print("-------In House Reservations List-------")
-        print(funcs.inhouse_reservations_list(funcs.checkin))
+        print(inh_list)
 
 
         # elif user == "2": # GET BY AUTHOR

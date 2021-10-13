@@ -43,6 +43,142 @@
         {
             "name": "Nic",
             "last name": "Guz"
+        },
+        {
+            "name": "123",
+            "last name": "24234",
+            "id": "234",
+            "nights": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/funcs.py"
+        },
+        {
+            "name": "asda",
+            "last name": "sad",
+            "id": "asd",
+            "nights": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/funcs.py"
+        },
+        {
+            "name": "ssad",
+            "last name": "sadasd",
+            "id": "12",
+            "nights": "2"
+        },
+        {
+            "name": "Nic",
+            "last name": "Guz",
+            "id": "123",
+            "roomtype": "Presidential Suite",
+            "nights": "3"
+        },
+        {
+            "name": "Maria",
+            "last name": "Maria",
+            "id": "294823943",
+            "roomtype": "Single Room",
+            "nights": "2"
+        },
+        {
+            "name": "asjdsadk",
+            "last name": "asjdhsa",
+            "id": "12",
+            "roomtype": "Presidential Suite",
+            "nights": 2
+        },
+        {
+            "name": "naisdsa",
+            "last name": "asdsad",
+            "id": "23",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "adsad",
+            "last name": "asdas",
+            "id": "50",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "asdasd",
+            "last name": "Guzzer",
+            "id": "47",
+            "roomtype": "Standard Room",
+            "nights": 12
+        },
+        {
+            "name": "nshjdsa",
+            "last name": "shdsahdj",
+            "id": "17",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "sadsad",
+            "last name": "sadasd",
+            "id": "10",
+            "roomtype": "Presidential Suite",
+            "nights": 9
+        },
+        {
+            "name": "sadsad",
+            "last name": "sadasd",
+            "id": "10",
+            "roomtype": "Presidential Suite",
+            "nights": 9
+        },
+        {
+            "name": "sadsad",
+            "last name": "sadasd",
+            "id": "10",
+            "roomtype": "Presidential Suite",
+            "nights": 9
+        },
+        {
+            "name": "asdas",
+            "last name": "asdas",
+            "id": "11",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "asdas",
+            "last name": "sdsa",
+            "id": "test",
+            "roomtype": "Presidential Suite",
+            "nights": 6
+        },
+        {
+            "name": "asdas",
+            "last name": "sdsa",
+            "id": "test",
+            "roomtype": "Presidential Suite",
+            "nights": 6
+        },
+        {
+            "name": "efg",
+            "last name": "sjhf",
+            "id": "17",
+            "roomtype": "Standard Room"
+        },
+        {
+            "name": "Nic",
+            "last name": "Guz",
+            "id": "117",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "nc",
+            "last name": "g",
+            "id": "12",
+            "roomtype": "Single Room"
+        },
+        {
+            "name": "f",
+            "last name": "s",
+            "id": "1",
+            "roomtype": "Presidential Suite"
+        },
+        {
+            "name": "Nic",
+            "last name": "GUz",
+            "id": "1000",
+            "roomtype": "Presidential Suite",
+            "nights": 9
         }
     ]
 }

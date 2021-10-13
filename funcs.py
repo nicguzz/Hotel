@@ -8,11 +8,16 @@ CWD = os.path.dirname(__file__)
 
 def menu():
     print("-------Welcome to Mini Hotel!-------")
-    print("1. New reservation")
-    print("2. Checkin by ID")
-    print("3. In house reservations")
-    print("4. Bar")
-    print("5. Checkout")
+    print("1. New reservation") #here it adds new name, ID, roomtype, nights and it will save in reservation.json 
+    print("2. Checkin by ID") # checkin.json list will be for the In house reservations, so I will bring from reservation.json to Checkin list, so the guest will be checked in.
+    print("3. In house reservations") #I wish to search inhouse guests by some filters.
+    print("4. Bar") # I want to add some bills and consumptions from a Bar, like creating a small menu and add it to the guest bill
+    print("5. Checkout") #Here it will be the guest bill which the room nights rate and also the bar bill will be all together, showing what guest needs to pay
+
+def inhouse_menu():
+    print("1. Search by name")
+    print("2. Search by ID")
+    print("3.All In House List")
 
 roomtypes = {
         "Presidential Suite": 200,
@@ -22,41 +27,60 @@ roomtypes = {
 
 
 
-with open(f"{CWD}/reservation.json", encoding="utf8") as file:
+with open(f"{CWD}/reservation.json", encoding="utf8") as file: #LOAD RESERVATION JSON
     reservation = json.load(file)["Reservation"]
 
-with open(f"{CWD}/checkin.json", encoding="utf8") as file:
+with open(f"{CWD}/checkin.json", encoding="utf8") as file: #LOAD CHECKIN JSON
     checkin = json.load(file)["Reservation"]
 
 
 def json_save():
-    with open(f"{CWD}/reservation.json", "w", encoding = "utf8") as file: #  "w" means write, encoding is the accents, 
+    with open(f"{CWD}/reservation.json", "w", encoding = "utf8") as file: #  saves in reservation
         json.dump({"Reservation": reservation}, file, ensure_ascii=False, indent=4) 
 
 def checkin_save(data):
-    with open(f"{CWD}/checkin.json", "w", encoding = "utf8") as file: #  "w" means write, encoding is the accents, 
+    with open(f"{CWD}/checkin.json", "w", encoding = "utf8") as file: #  saves in checkin
         json.dump({"Reservation": data}, file, ensure_ascii=False, indent=4) 
 
 def create_reservation():
-
     dictionary = {}
     keys = list(reservation[0].keys())
+    nights_max = 10
     for key in keys: # title, author
         if key == 'roomtype':
             for i, room in enumerate(roomtypes): 
                 print(f"{i + 1 }. {room}")
 
             user_index = int(input("Choose: "))
-            print(roomtypes[user_index - 1])
-            # return dictionary[key]
-                #WE NEED TO ADD ROOMTYPE THAT USER CHOOSES(1,2,3) TO THE NEW DICTIONARY BEFORE COMPLETING RESA
-        else:
-            dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+            result = list(roomtypes)[user_index - 1]
 
-        # dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+            dictionary[key] = result 
+        elif key == 'nights':
+    
+            
+            number = int(input(f"Please insert {key}, maximum of 10 nights: "))
+            if number <= 10:
+                dictionary[key] = number
         
-    reservation.append(dictionary)
-    json_save()
+
+            else:
+                print("Something went wrong, please choose up to 10 nights")
+                nights_max = 11
+                
+                
+        else:
+                dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
+        
+            
+    if nights_max <= 10:
+        reservation.append(dictionary)
+        print("--------------------------")
+        print(f" {dictionary['name']} was added to Reservations!")
+
+        json_save()
+    else:
+        print("Something went wrong, going back")
+
 
 
 def reservation_by_id(id_reservation, data):
@@ -75,69 +99,3 @@ def guest_by_name(search_term, list, key):
 def inhouse_reservations_list(list):
     for rsv in list:
         print(f"\n{rsv}")
-
-
-
-
-
-# class Reservation:
-
-#     #dictionary = {}
-
-#     def __init__(self, name, id, roomtype, nights):
-#     #  id, roomtype, nights, extras):
-#         # if type(json_name) != str:
-#         #     raise ValueError("The path must be a str")
-        
-#         # self.json_name = json_name
-#         self.name = name
-#         self.id = id
-#         self.roomtype = roomtype
-#         self.nights = nights
-#         # self.roomtype = roomtype
-#         # self.nights = nights
-#         # self. extras = extras
-    
-#     def create_reservation(name, id, roomtype, nights): #, roomType, nights, extras):
-#         #reservation = Reservation(name)
-#     #    print(f"reservation: " + name)
-
-#         dicionary = {}
-
-#         for var in ["name", "id"]:
-#             dicionary[var] = eval(var)
-
-#             write_json(dicionary, "hotel.json")
-
-#         return dicionary
-
-
-# def read_json(json_name):
-#     with open(f"{CWD}/{json_name}.json", encoding="utf8") as file:
-#         return json.load(file)
-
-# def write_json(dict, json_name):
-
-#     with open(f"{CWD}/{json_name}", "w", encoding="utf8") as file:
-#         #json.dump(reservation, file, ensure_ascii=False, indent=4)
-#         json.dump({f"Reservation": dict}, file, ensure_ascii=False, indent=4)
-
-# user = 0
-
-# while user != "q":
-#     funcs.menu()
-#     user = input("Choose: ")
-
-#     if user == "1": # Create user
-#         print("New reservation")
-#         name = input("Name: ")
-#         id = input("ID: ")
-
-#         reservation = Reservation.create_reservation(name, id)
-
-#     elif (user != "q"):
-#         print("Input not valid")
-    
-        
-# with open(f"{CWD}/{json_file}", "w", encoding="utf8") as file:
-#         json.dump(users, file, ensure_ascii=False, indent=4)

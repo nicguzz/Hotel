@@ -1,8 +1,5 @@
 import funcs
 
-
-
-
 user = 0
 
 while user != "q":
@@ -31,13 +28,12 @@ while user != "q":
                 print("Please insert either Y/N")
 
     elif user == "3": # Inhouse reservations
-
-        inh_list = funcs.inhouse_reservations_list(funcs.checkin)
-
-
         print("-------In House Reservations List-------")
-        print(inh_list)
+        funcs.inhouse_menu()
+        
 
+
+        # inh_list = funcs.inhouse_reservations_list(funcs.checkin)
 
         # elif user == "2": # GET BY AUTHOR
             # key = "name"

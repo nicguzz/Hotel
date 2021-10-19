@@ -35,15 +35,6 @@
             "roomtype": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/main.py",
             "nights": "/usr/local/bin/python3 /Users/nicguzzetti/Desktop/Clase/git_new/hotel/main.py"
         },
-        {},
-        {},
-        {},
-        {},
-        {},
-        {
-            "name": "Nic",
-            "last name": "Guz"
-        },
         {
             "name": "123",
             "last name": "24234",
@@ -111,21 +102,21 @@
         {
             "name": "sadsad",
             "last name": "sadasd",
-            "id": "10",
+            "id": "1123213",
             "roomtype": "Presidential Suite",
             "nights": 9
         },
         {
             "name": "sadsad",
             "last name": "sadasd",
-            "id": "10",
+            "id": "1131231233",
             "roomtype": "Presidential Suite",
             "nights": 9
         },
         {
             "name": "sadsad",
             "last name": "sadasd",
-            "id": "10",
+            "id": "1123123123",
             "roomtype": "Presidential Suite",
             "nights": 9
         },
@@ -138,14 +129,14 @@
         {
             "name": "asdas",
             "last name": "sdsa",
-            "id": "test",
+            "id": "123123123",
             "roomtype": "Presidential Suite",
             "nights": 6
         },
         {
             "name": "asdas",
             "last name": "sdsa",
-            "id": "test",
+            "id": "3243242",
             "roomtype": "Presidential Suite",
             "nights": 6
         },
@@ -179,6 +170,20 @@
             "id": "1000",
             "roomtype": "Presidential Suite",
             "nights": 9
+        },
+        {
+            "name": "Maria",
+            "last name": "Pineda",
+            "id": "17",
+            "roomtype": "Presidential Suite",
+            "nights": 10
+        },
+        {
+            "name": "nicolas",
+            "last name": "Guz",
+            "id": "278128371283",
+            "roomtype": "Presidential Suite",
+            "nights": 2
         }
     ]
 }

@@ -5,7 +5,6 @@ import json
 CWD = os.path.dirname(__file__)
 
 
-
 def menu():
     print("-------Welcome to Mini Hotel!-------")
     print("1. New reservation") #here it adds new name, ID, roomtype, nights and it will save in reservation.json 
@@ -45,41 +44,55 @@ def checkin_save(data):
 def create_reservation():
     dictionary = {}
     keys = list(reservation[0].keys())
-    nights_max = 10
-    for key in keys: # title, author
-        if key == 'roomtype':
-            for i, room in enumerate(roomtypes): 
-                print(f"{i + 1 }. {room}")
+    count = 1
+    for key in keys: # title, author, id, roomnights
+        if count >= 1:
+            if key == 'roomtype':
+                for i, room in enumerate(roomtypes): 
+                    print(f"{i + 1 }. {room}")
 
-            user_index = int(input("Choose: "))
-            result = list(roomtypes)[user_index - 1]
+                user_index = int(input("Choose: "))
+                result = list(roomtypes)[user_index - 1]
 
-            dictionary[key] = result 
-        elif key == 'nights':
-    
-            
-            number = int(input(f"Please insert {key}, maximum of 10 nights: "))
-            if number <= 10:
-                dictionary[key] = number
+                dictionary[key] = result 
+            elif key == 'nights':
         
+                
+                night_number = int(input(f"Please insert {key}, maximum of 10 nights: "))
+                if night_number <= 10:
+                    dictionary[key] = night_number
+            
 
+                else:
+                    print("Something went wrong, please choose up to 10 nights")
+                    count = 0
+                    break
+
+            elif key == 'id':
+                user_id = input("Input your ID: ")
+                for id in reservation:
+                    if id["id"] == user_id:
+                        print("It already exists that ID!")
+                        count = 0
+                        break
+                    else:
+                        dictionary[key] = user_id
+
+
+                    
             else:
-                print("Something went wrong, please choose up to 10 nights")
-                nights_max = 11
-                
-                
-        else:
-                dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
-        
+                    dictionary[key] = input(f"Please insert {key}: ") #here it adds new title and author
             
-    if nights_max <= 10:
-        reservation.append(dictionary)
-        print("--------------------------")
-        print(f" {dictionary['name']} was added to Reservations!")
+                
 
-        json_save()
-    else:
-        print("Something went wrong, going back")
+        else:
+            print("Something went wrong, going back")
+            return
+
+    reservation.append(dictionary)
+    print("--------------------------")
+    print(f" {dictionary['name']} was added to Reservations!")
+    json_save()
 
 
 

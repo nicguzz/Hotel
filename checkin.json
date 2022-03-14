@@ -1,18 +1,46 @@
 {
     "Reservation": [
-        [
-            {
-                "name": "test",
-                "id": "test",
-                "roomtype": "test",
-                "nights": "test"
-            }
-        ],
         {
             "name": "Nic",
+            "last name": "Guzzetti",
             "id": "10",
             "roomtype": "double",
-            "nights": "3"
+            "nights": 2
+        },
+        {
+            "name": "Maria",
+            "last name": "Pineda",
+            "id": "11",
+            "roomtype": "Presidential Suite",
+            "nights": 6
+        },
+        {
+            "name": "Goerrg",
+            "last name": "Pineda",
+            "id": "14",
+            "roomtype": "Standard Room",
+            "nights": 3
+        },
+        {
+            "name": "Guilhermina",
+            "last name": "Aranha",
+            "id": "47",
+            "roomtype": "Presidential Suite",
+            "nights": 3
+        },
+        {
+            "name": "Aure",
+            "last name": "Jove",
+            "id": "148",
+            "roomtype": "Presidential Suite",
+            "nights": 9
+        },
+        {
+            "name": "samantha",
+            "last name": "Martins",
+            "id": "19",
+            "roomtype": "Presidential Suite",
+            "nights": 6
         }
     ]
 }
